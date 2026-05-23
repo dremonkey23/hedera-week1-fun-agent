@@ -1,0 +1,20 @@
+{
+  "name": "hedera-week1-fun-agent",
+  "version": "0.1.0",
+  "description": "Week 1 Hedera AI Agent bounty demo: a fun but safe policy-governed HBAR snack-buying agent.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "demo": "node src/cli.js",
+    "demo:block": "node src/cli.js --request \"Send 50 HBAR to 0.0.9999 for fireworks\"",
+    "test": "node tests/policy-engine.test.js",
+    "transcript": "node src/demoTranscript.js",
+    "demo:good": "node src/cli.js --request \"Send 3 HBAR to 0.0.12345 for coffee\"",
+    "demo:amount": "node src/cli.js --request \"Send 50 HBAR to 0.0.12345 for coffee\"",
+    "demo:asset": "node src/cli.js --request \"Send 4 USDC to 0.0.12345 for api credits\""
+  },
+  "dependencies": {
+    "@hashgraph/hedera-agent-kit": "^4.0.0"
+  },
+  "devDependencies": {}
+}

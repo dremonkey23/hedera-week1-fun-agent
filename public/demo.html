@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hedera Snack Guardian Agent</title>
+  <style>
+    :root{--bg:#090d18;--card:#12182a;--line:#293350;--text:#eef2ff;--muted:#a9b4d0;--green:#34d399;--red:#fb7185;--gold:#fbbf24;--blue:#93c5fd}*{box-sizing:border-box}body{font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:radial-gradient(circle at top left,#182544,var(--bg) 42%);color:var(--text);margin:0;padding:34px}.card{max-width:1120px;margin:auto;background:linear-gradient(145deg,#12182a,#0d1222);border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:0 28px 90px #0009}h1{font-size:44px;line-height:1;margin:14px 0;color:#d1fae5}p{color:var(--muted)}.pill{display:inline-block;border:1px solid var(--green);color:var(--green);border-radius:999px;padding:7px 12px;font-size:12px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.box{background:#080c18;border:1px solid var(--line);border-radius:16px;padding:18px}textarea{width:100%;min-height:88px;border-radius:14px;border:1px solid #3b4668;background:#070a13;color:var(--text);padding:14px;font:16px ui-monospace,Menlo,monospace}button{border:0;border-radius:12px;padding:11px 14px;margin:6px 6px 6px 0;background:#243255;color:white;cursor:pointer}button.primary{background:var(--green);color:#062014;font-weight:800}pre{white-space:pre-wrap;word-break:break-word;background:#050812;border:1px solid #28324e;border-radius:16px;padding:16px;max-height:520px;overflow:auto}.good{color:var(--green)}.bad{color:var(--red)}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:22px 0}.flow div{border:1px solid var(--line);border-radius:14px;padding:12px;background:#0a1020;color:var(--blue);font-size:13px;text-align:center}@media(max-width:860px){.grid,.flow{grid-template-columns:1fr}h1{font-size:34px}}
+  </style>
+</head>
+<body><main class="card">
+  <span class="pill">Hedera AI Agent Bounty • Week 1 • Fun Basic Agent</span>
+  <h1>Snack Guardian</h1>
+  <p>A fun AI payment agent that can prepare tiny HBAR snack/coffee transfers, but cannot spend unless deterministic guardrails pass and a human approves. Default mode is mock-safe: no wallet, no private key, no transaction submission.</p>
+  <div class="flow"><div>User request</div><div>Intent parser</div><div>Policy engine</div><div>Hedera Agent Kit prep</div><div>HCS-style audit</div></div>
+  <div class="grid">
+    <section class="box"><h2>Try a request</h2><textarea id="request">Send 3 HBAR to 0.0.12345 for coffee</textarea><br><button class="primary" id="run">Run policy check</button><button data-scenario="Send 3 HBAR to 0.0.12345 for coffee">Safe coffee</button><button data-scenario="Send 50 HBAR to 0.0.12345 for coffee">Overspend</button><button data-scenario="Send 4 USDC to 0.0.12345 for api credits">Wrong asset</button><button data-scenario="Send 2 HBAR to 0.0.99999 for snack">Bad recipient</button><h2>Decision: <span id="decision"></span></h2></section>
+    <section class="box"><h2>Policy</h2><ul><li>Max 10 HBAR per payment</li><li>25 HBAR daily budget</li><li>HBAR only</li><li>Allowlisted recipients only</li><li>Coffee/snack/API/demo purposes only</li><li>Human approval required before submit</li></ul></section>
+  </div>
+  <h2>Agent output</h2><pre id="output"></pre>
+</main><script src="./app.js"></script></body></html>
