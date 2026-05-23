@@ -29,8 +29,13 @@ node src/cli.js --request "Send 3 HBAR to 0.0.12345 for coffee"
 node src/cli.js --request "Send 50 HBAR to 0.0.12345 for coffee"
 ```
 
-## Demo URL / GitHub URL / feedback issue URL
-Pending approval.
+## Public URLs
+- GitHub repo: https://github.com/dremonkey23/hedera-week1-fun-agent
+- Demo / X proof: https://x.com/orchest86882/status/2058154848747507737
+- Hedera Agent Kit feedback issue: https://github.com/hashgraph/hedera-agent-kit-js/issues/846
 
 ## Payout wallet
-Pending approval.
+PENDING — requires public Hedera payout account/address from submitter. Do not enter private key or seed phrase.
+
+## Identity / legal fields
+PENDING — fill directly in bounty form if required: legal name, email, country/eligibility, tax/terms confirmations.
